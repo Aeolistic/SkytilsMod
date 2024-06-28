@@ -128,6 +128,13 @@ object PartyFinderStats {
                                     ?: "§cNo Pet Item"}"
                             )
                         )
+                        component.append(
+                            UTextComponent("§5Miscellanous: §7(Hover)\n\n").setHoverText(
+                            """
+                                #§aTotal Secrets Found: §l§e${NumberUtil.nf.format(secrets)}
+                            """.trimMargin("#")
+                        )
+                            
                     } ?: component.append("§cNo Pet Equipped!")
 
                     profileData.pets_data.pets.find(Pet::isSpirit)?.run {
